@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas Para Ti 🌻💛</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background with floating heart particles -->
+  <div class="background-hearts" aria-hidden="true"></div>
+
+  <main class="app-container">
+    <div class="brand">Nayedev</div>
+
+    <div class="main-card" id="mainCard">
+      <!-- STAGE 1: INTRO SCREEN -->
+      <div class="intro-screen" id="introScreen">
+        <button class="sunflower-start-btn" id="startBtn" type="button" aria-label="Abrir regalo">
+          <div class="sunflower-icon">
+            <div class="petals">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="center-disc"></div>
+          </div>
+          <div class="btn-text">
+            <span>Flores Para Tí</span>
+            <div class="underline"></div>
+          </div>
+        </button>
+      </div>
+
+      <!-- STAGES 2 - 5: ANIMATION & STORY SCREEN -->
+      <div class="story-screen hidden" id="storyScreen">
+        
+        <!-- Canvas Container for Seed, Tree Growth, Heart Sunflowers & Falling Petals -->
+        <div class="canvas-container" id="canvasContainer">
+          <canvas id="treeCanvas" width="800" height="520"></canvas>
+        </div>
+
+        <!-- Left Content Section (Appears after tree moves to right) -->
+        <div class="left-content hidden" id="leftContent">
+          <h2 class="title-header">Flores Amarillas para el amor de mi vida:</h2>
+          
+          <div class="letter-box">
+            <p>Desde que llegué a este mundo, mi amor por ti cada día crece más. Eres mi fuerza, mi apoyo y mi persona favorita. Te amo con toda la fuerza de mi corazón, te amo con mi vida. 💛</p>
+          </div>
+
+          <div class="counter-section">
+            <p class="counter-title">Mi amor por ti comenzó hace...</p>
+            <div class="counter-badge" id="counter">
+              <span id="counterDays">0</span> días 
+              <span id="counterHours">00</span> horas 
+              <span id="counterMins">00</span> minutos 
+              <span id="counterSecs">00</span> segundos
+            </div>
+          </div>
+
+          <!-- Photos Section -->
+          <div class="photo-section" id="photoSection">
+            <button class="toggle-photos-btn" id="togglePhotosBtn" type="button">
+              📷 Ver nuestras fotos 💛
+            </button>
+            <div class="photo-frame-wrapper hidden" id="photoFrameWrapper">
+              <div class="photo-frame">
+                <img id="photo" src="fotos/mama-1.jpg" alt="Foto de mama y yo">
+                <button class="photo-arrow left" id="prevPhoto" type="button">‹</button>
+                <button class="photo-arrow right" id="nextPhoto" type="button">›</button>
+              </div>
+              <div class="dots" id="dots"></div>
+            </div>
+          </div>
+
+          <button class="replay-btn" id="replayBtn" type="button">
+            ↻ Volver a ver cómo florece
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
